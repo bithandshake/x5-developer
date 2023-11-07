@@ -1,14 +1,10 @@
 
 (ns x.developer.request-inspector.views
-    (:require [hiccup.api                                              :as hiccup]
-              [map.api                                                 :as map]
-              [pretty.print                                            :as pretty]
-              [pretty-elements.api                                     :as pretty-elements]
-              [reagent.api                                             :refer [ratom]]
-              [time.api                                                :as time]
-
-              [ugly-elements.api :as ugly-elements]
-
+    (:require [hiccup.api                                 :as hiccup]
+              [pretty.print                               :as pretty]
+              [reagent.api                                :refer [ratom]]
+              [time.api                                   :as time]
+              [ugly-elements.api                          :as ugly-elements]
               [x.developer.request-inspector.env          :as request-inspector.env]
               [x.developer.request-inspector.side-effects :as request-inspector.side-effects]
               [x.developer.request-inspector.state        :as request-inspector.state]
@@ -71,19 +67,14 @@
   ; @ignore
   []
   (let [request-props (request-inspector.env/get-inspected-request-props)]
-       [pretty-elements/label ::request-label
-                              {:content [:pre (:sent-time request-props)]
-                               :font-size :xxs}]
-      [ugly-elements/label ::request-history-timestamp
-                           {:content (-> request-props :sent-time (time/timestamp-string->date-time :yyyymmdd :hhmmssmmm))
-                            :font-size :xs}]))
+       [ugly-elements/label ::request-history-timestamp
+                            {:content (-> request-props :sent-time (time/timestamp-string->date-time :yyyymmdd :hhmmssmmm))
+                             :font-size :xs}]))
 
 (defn go-up-button
   ; @ignore
   []
   (let [on-click #(request-inspector.side-effects/reset-inspector!)]
-       [pretty-elements/icon-button {:on-click on-click :icon :arrow_back :hover-color :highlight
-                                     :border-radius {:all :s} :indent {:all :xxs}}]
        [ugly-elements/icon-button ::go-up-button
                                   {:icon      :arrow_back
                                    :on-click  on-click}]))
@@ -92,9 +83,8 @@
   ; @ignore
   []
   (let [request-id @request-inspector.state/INSPECTED-REQUEST]
-       [pretty-elements/label ::request-label
-                              {:content     [:pre (str request-id)]
-                               :font-weight :medium}]))
+       [ugly-elements/label ::request-label
+                            {:content (str request-id)}]))
 
 (defn request-data-label-bar
   ; @ignore
