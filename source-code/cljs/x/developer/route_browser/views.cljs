@@ -52,6 +52,9 @@
 (defn view
   ; @description
   ; Route browser for client-side routes handled by the 'x.router' module.
+  ;
+  ; @usage
+  ; [route-browser]
   []
   [:<> [ugly-elements/import-styles]
        [route-filter-field]

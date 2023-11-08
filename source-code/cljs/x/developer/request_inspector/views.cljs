@@ -147,6 +147,9 @@
 (defn view
   ; @description
   ; Request history inspector for requests sent by the 'x.sync' module.
+  ;
+  ; @usage
+  ; [request-inspector]
   []
   [:<> [ugly-elements/import-styles]
        (if-let [request-id @request-inspector.state/INSPECTED-REQUEST]

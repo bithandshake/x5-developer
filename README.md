@@ -11,13 +11,13 @@ The <strong>x5-developer</strong> library is a set of developer tools for the x5
 ### deps.edn
 
 ```
-{:deps {bithandshake/x5-developer {:git/url "https://github.com/bithandshake/x5-developer"
-                                   :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+{:deps {x5-project/x5-developer {:git/url "https://github.com/x5-project/x5-developer"
+                                 :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
 ```
 
 ### Current version
 
-Check out the latest commit on the [release branch](https://github.com/bithandshake/x5-developer/tree/release).
+Check out the latest commit on the [release branch](https://github.com/x5-project/x5-developer/tree/release).
 
 ### Documentation
 
