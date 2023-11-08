@@ -3,7 +3,7 @@
  :deps  {bithandshake/cljc-fruits  {:git/url "https://github.com/bithandshake/cljc-fruits"
                                     :sha     "77103150fe4f329c5d4401a779485d034c014e87"}
          bithandshake/x5           {:git/url "https://github.com/bithandshake/x5"
-                                    :sha     "d3d24296258352e90f561f237b0d4bd8f2b73e56"}
+                                    :sha     "1f5376428ade90191d9d06cd9e0737115ae0ba71"}
          org.clojure/clojurescript {:mvn/version "1.10.891"}
          pretty-project/ugly-ui    {:git/url "https://github.com/pretty-project/ugly-ui"
-                                    :sha     "d3d24296258352e90f561f237b0d4bd8f2b73e56"}}}
+                                    :sha     "1f5376428ade90191d9d06cd9e0737115ae0ba71"}}}
