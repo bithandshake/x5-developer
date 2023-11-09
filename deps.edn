@@ -4,6 +4,6 @@
                                     :sha     "aeab860b3dd44aec44b99c2ddde2feb8b10013df"}
          org.clojure/clojurescript {:mvn/version "1.10.891"}
          x5-project/x5             {:git/url "https://github.com/x5-project/x5"
-                                    :sha     "98c67c889915decc263ced414d9d0ef7b394ad91"}
+                                    :sha     "68d7aa5d074744c58133a95c83b30ef6d77d5df2"}
          pretty-project/ugly-ui    {:git/url "https://github.com/pretty-project/ugly-ui"
-                                    :sha     "98c67c889915decc263ced414d9d0ef7b394ad91"}}}
+                                    :sha     "68d7aa5d074744c58133a95c83b30ef6d77d5df2"}}}
