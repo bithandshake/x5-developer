@@ -16,7 +16,7 @@
   ; @description
   ; Returns the request IDS read from the request history.
   []
-  (map/get-keys @x.sync.request-handler.state/REQUEST-HISTORY))
+  (map/keys @x.sync.request-handler.state/REQUEST-HISTORY))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
