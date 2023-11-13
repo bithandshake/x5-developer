@@ -4,7 +4,7 @@
               [x.sync.response-handler.state]
               [map.api                             :as map]
               [noop.api                            :refer [return]]
-              [vector.api                          :as vector]
+              [seqable.api                         :as seqable]
               [x.developer.request-inspector.state :as request-inspector.state]))
 
 ;; ----------------------------------------------------------------------------
@@ -64,7 +64,7 @@
                   ; Returns the currently inspected history index
                   (return request-history-dex)
                   ; Returns the last history index of the currently inspected request (as default)
-                  (-> @x.sync.request-handler.state/REQUEST-HISTORY request-id vector/last-dex))))
+                  (-> @x.sync.request-handler.state/REQUEST-HISTORY request-id seqable/last-dex))))
 
 (defn get-request-history-count
   ; @ignore
