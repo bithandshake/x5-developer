@@ -37,9 +37,9 @@
   []
   (let [client-routes @(r/subscribe [:x.router/get-client-routes])
         filter-term   @(r/subscribe [:get-item [:ui :developer :route-browser/meta-items :filter-term]])]
-       (letfn [(filter-f [route-template] (string/starts-with? route-template filter-term))
+       (letfn [(filter-f [{:keys [route-template]}] (string/starts-with? route-template filter-term))
                (put-f    [[route-id route-props]] [route-list-item route-id route-props])]
-              (let [filtered-routes (map/filter-values-by client-routes filter-f :route-template)]
+              (let [filtered-routes (map/filter-values client-routes filter-f)]
                    (hiccup/put-with [:div {:style {:display :flex :flex-direction :column}}]
                                     filtered-routes put-f)))))
 
