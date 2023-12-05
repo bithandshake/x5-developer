@@ -138,8 +138,8 @@
   []
   (let [request-ids (request-inspector.env/get-request-ids)]
        [:div {:style {:display "flex" :flex-direction "column" :overflow "scroll"}}
-             (letfn [(f [request-id] [request-list-item request-id])]
-                    (hiccup/put-with [:<>] request-ids f))]))
+             (letfn [(f0 [request-id] [request-list-item request-id])]
+                    (hiccup/put-with [:<>] request-ids f0))]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
