@@ -1,7 +1,7 @@
 
 (ns x.developer.request-inspector.views
-    (:require [hiccup.api                                 :as hiccup]
-              [pretty.print                               :as pretty]
+    (:require [fruits.hiccup.api                          :as hiccup]
+              [fruits.pretty.api                          :as pretty]
               [reagent.api                                :refer [ratom]]
               [time.api                                   :as time]
               [ugly-elements.api                          :as ugly-elements]

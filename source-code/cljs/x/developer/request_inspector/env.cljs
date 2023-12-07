@@ -2,9 +2,9 @@
 (ns x.developer.request-inspector.env
     (:require [x.sync.request-handler.state]
               [x.sync.response-handler.state]
-              [map.api                             :as map]
-              [noop.api                            :refer [return]]
-              [seqable.api                         :as seqable]
+              [fruits.map.api                      :as map]
+              [fruits.noop.api                     :refer [return]]
+              [fruits.seqable.api                  :as seqable]
               [x.developer.request-inspector.state :as request-inspector.state]))
 
 ;; ----------------------------------------------------------------------------
