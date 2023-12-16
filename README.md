@@ -21,7 +21,7 @@ Check out the latest commit on the [release branch](https://github.com/x5-projec
 
 ### Documentation
 
-The <strong>x5-developer</strong> functional documentation is [available here](documentation/COVER.md).
+The <strong>x5-developer</strong> functional documentation is [available here](https://x5-project.github.io/x5-developer).
 
 ### Changelog
 
