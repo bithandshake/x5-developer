@@ -5,8 +5,7 @@
 
 The <strong>x5-developer</strong> library is a set of developer tools for the x5 web application framework.
 
-> UI components in this library are Reagent components. For more information, check out
-  the [Reagent Project](https://github.com/reagent-project/reagent).
+> UI components in this library are Reagent components. Check out the [Reagent Project](https://github.com/reagent-project/reagent).
 
 ### deps.edn
 
