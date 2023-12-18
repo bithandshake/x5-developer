@@ -12,7 +12,7 @@ The <strong>x5-developer</strong> library is a set of developer tools for the x5
 
 ```
 {:deps {x5-project/x5-developer {:git/url "https://github.com/x5-project/x5-developer"
-                                 :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+                                 :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
