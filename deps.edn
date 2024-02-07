@@ -1,9 +1,9 @@
 
 {:paths ["source-code/cljs"]
  :deps  {bithandshake/cljc-fruits  {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                    :sha     "8cee6262833c1ed71242c4971f52a41e7b6cd547"}
+                                    :sha     "7ba2b1c7fc855bb8910a57cc85db950de68c1d1e"}
          org.clojure/clojurescript {:mvn/version "1.10.891"}
          x5-project/x5             {:git/url "https://github.com/x5-project/x5"
-                                    :sha     "18937c91e6e32b7ce70504dd75435a3576ac16dc"}
+                                    :sha     "362a7341c79f6abb2b10cf43fee735b7cdb7daf0"}
          pretty-project/ugly-ui    {:git/url "https://github.com/pretty-project/ugly-ui"
-                                    :sha     "18937c91e6e32b7ce70504dd75435a3576ac16dc"}}}
+                                    :sha     "362a7341c79f6abb2b10cf43fee735b7cdb7daf0"}}}
