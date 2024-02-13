@@ -1,6 +1,6 @@
 
 (ns x.developer.request-inspector.state
-    (:require [reagent.api :refer [ratom]]))
+    (:require [reagent.core :as reagent]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -8,9 +8,9 @@
 ; @ignore
 ;
 ; @atom (keyword)
-(defonce INSPECTED-REQUEST (ratom nil))
+(defonce INSPECTED-REQUEST (reagent/atom nil))
 
 ; @ignore
 ;
 ; @atom (integer)
-(defonce INSPECTED-HISTORY-DEX (ratom nil))
+(defonce INSPECTED-HISTORY-DEX (reagent/atom nil))
