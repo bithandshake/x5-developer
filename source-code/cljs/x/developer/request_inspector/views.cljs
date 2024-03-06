@@ -2,7 +2,7 @@
 (ns x.developer.request-inspector.views
     (:require [fruits.hiccup.api                          :as hiccup]
               [fruits.pretty.api                          :as pretty]
-              [reagent.core :as reagent]
+              [reagent.core                               :as reagent]
               [time.api                                   :as time]
               [ugly-elements.api                          :as ugly-elements]
               [x.developer.request-inspector.env          :as request-inspector.env]
