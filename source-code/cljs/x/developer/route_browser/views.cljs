@@ -4,7 +4,7 @@
               [fruits.map.api    :as map]
               [fruits.pretty.api :as pretty]
               [fruits.string.api :as string]
-              [re-frame.api      :as r]
+              [re-frame.extra.api :as r]
               [ugly-elements.api :as ugly-elements]))
 
 ;; ----------------------------------------------------------------------------
