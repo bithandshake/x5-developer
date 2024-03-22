@@ -1,11 +1,11 @@
 
 (ns x.developer.route-browser.views
-    (:require [fruits.hiccup.api :as hiccup]
-              [fruits.map.api    :as map]
-              [fruits.pretty.api :as pretty]
-              [fruits.string.api :as string]
+    (:require [fruits.hiccup.api  :as hiccup]
+              [fruits.map.api     :as map]
+              [fruits.pretty.api  :as pretty]
+              [fruits.string.api  :as string]
               [re-frame.extra.api :as r]
-              [ugly-elements.api :as ugly-elements]))
+              [ugly-elements.api  :as ugly-elements]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
