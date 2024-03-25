@@ -15,7 +15,7 @@
   []
   [ugly-elements/text-field {:label       "Filter"
                              :placeholder "/my-route"
-                             :on-change   #(r/dispatch  [:set-item! [:ui :developer :route-browser/meta-items :filter-term] %])
+                             :on-change-f #(r/dispatch  [:set-item! [:ui :developer :route-browser/meta-items :filter-term] %])
                              :value       @(r/subscribe [:get-item  [:ui :developer :route-browser/meta-items :filter-term]])}])
 
 ;; ----------------------------------------------------------------------------
@@ -28,9 +28,9 @@
   ; @param (map) route-props
   [route-id route-props]
   [:<> [ugly-elements/horizontal-separator {}]
-       [ugly-elements/label {:content (str route-id)}]
-       [ugly-elements/label {:content (pretty/mixed->string route-props)
-                             :color   :muted}]])
+       [ugly-elements/label {:content    (str route-id)}]
+       [ugly-elements/label {:content    (pretty/mixed->string route-props)
+                             :text-color :muted}]])
 
 (defn route-list
   ; @ignore
@@ -56,6 +56,6 @@
   ; @usage
   ; [route-browser]
   []
-  [:<> [ugly-elements/import-styles]
+  [:<> [ugly-elements/style-scope]
        [route-filter-field]
        [route-list]])

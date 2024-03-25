@@ -19,24 +19,24 @@
   (let [show-more?    (reagent/atom false)
         request-props (request-inspector.env/get-inspected-request-props)]
        (fn [] [:<> [ugly-elements/label ::server-response-label
-                                        {:content "Request details:"
-                                         :color :muted}]
+                                        {:content    "Request details:"
+                                         :text-color :muted}]
                    [ugly-elements/label ::request-details
                                         {:content   (pretty/mixed->string (if @show-more? request-props (request-inspector.utils/filter-request-data request-props)))
                                          :font-size :xs}]
                    [ugly-elements/horizontal-separator {:height :xs}]
                    [ugly-elements/button ::show-more-button
-                                         {:disabled? (= request-props (request-inspector.utils/filter-request-data request-props))
-                                          :content   (if @show-more? "SHOW LESS" "SHOW MORE")
-                                          :on-click  #(swap! show-more? not)}]])))
+                                         {:disabled?  (= request-props (request-inspector.utils/filter-request-data request-props))
+                                          :content    (if @show-more? "SHOW LESS" "SHOW MORE")
+                                          :on-click-f #(swap! show-more? not)}]])))
 
 (defn response-data
   ; @ignore
   []
   (let [request-response (request-inspector.env/get-inspected-server-response)]
        [:<> [ugly-elements/label ::server-response-label
-                                 {:content "Server response:"
-                                  :color :muted}]
+                                 {:content    "Server response:"
+                                  :text-color :muted}]
             [ugly-elements/label ::server-response-value
                                  {:content   (pretty/mixed->string request-response)
                                   :font-size :xs}]]))
@@ -49,9 +49,9 @@
   []
   (let [request-history-dex (request-inspector.env/get-request-history-dex)]
        [ugly-elements/icon-button ::go-bwd-button
-                                  {:disabled? (= request-history-dex 0)
-                                   :icon      :arrow_back_ios
-                                   :on-click  request-inspector.side-effects/inspect-prev-history!}]))
+                                  {:disabled?  (= request-history-dex 0)
+                                   :icon       :arrow_back_ios
+                                   :on-click-f request-inspector.side-effects/inspect-prev-history!}]))
 
 (defn go-fwd-button
   ; @ignore
@@ -59,9 +59,9 @@
   (let [request-history-count (request-inspector.env/get-request-history-count)
         request-history-dex   (request-inspector.env/get-request-history-dex)]
        [ugly-elements/icon-button ::go-fwd-button
-                                  {:disabled? (= request-history-count (inc request-history-dex))
-                                   :icon      :arrow_forward_ios
-                                   :on-click  request-inspector.side-effects/inspect-next-history!}]))
+                                  {:disabled?  (= request-history-count (inc request-history-dex))
+                                   :icon        :arrow_forward_ios
+                                   :on-click-f request-inspector.side-effects/inspect-next-history!}]))
 
 (defn request-history-timestamp
   ; @ignore
@@ -74,10 +74,10 @@
 (defn go-up-button
   ; @ignore
   []
-  (let [on-click #(request-inspector.side-effects/reset-inspector!)]
+  (let [on-click-f #(request-inspector.side-effects/reset-inspector!)]
        [ugly-elements/icon-button ::go-up-button
-                                  {:icon      :arrow_back
-                                   :on-click  on-click}]))
+                                  {:icon       :arrow_back
+                                   :on-click-f on-click-f}]))
 
 (defn request-label
   ; @ignore
@@ -130,8 +130,8 @@
   ;
   ; @param (keyword) request-id
   [request-id]
-  [ugly-elements/button {:on-click #(request-inspector.side-effects/inspect-request! request-id)
-                         :content  [:<> (str request-id) [request-list-item-timestamp request-id]]}])
+  [ugly-elements/button {:on-click-f #(request-inspector.side-effects/inspect-request! request-id)
+                         :content   [:<> (str request-id) [request-list-item-timestamp request-id]]}])
 
 (defn request-list
   ; @ignore
@@ -151,7 +151,7 @@
   ; @usage
   ; [request-inspector]
   []
-  [:<> [ugly-elements/import-styles]
+  [:<> [ugly-elements/style-scope]
        (if-let [request-id @request-inspector.state/INSPECTED-REQUEST]
                [request-view]
                [request-list])])
