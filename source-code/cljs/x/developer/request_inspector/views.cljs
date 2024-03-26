@@ -50,7 +50,7 @@
   (let [request-history-dex (request-inspector.env/get-request-history-dex)]
        [ugly-elements/icon-button ::go-bwd-button
                                   {:disabled?  (= request-history-dex 0)
-                                   :icon       :arrow_back_ios
+                                   :icon       :chevron_left
                                    :on-click-f request-inspector.side-effects/inspect-prev-history!}]))
 
 (defn go-fwd-button
@@ -60,7 +60,7 @@
         request-history-dex   (request-inspector.env/get-request-history-dex)]
        [ugly-elements/icon-button ::go-fwd-button
                                   {:disabled?  (= request-history-count (inc request-history-dex))
-                                   :icon        :arrow_forward_ios
+                                   :icon        :chevron_right
                                    :on-click-f request-inspector.side-effects/inspect-next-history!}]))
 
 (defn request-history-timestamp

@@ -4,9 +4,9 @@
                                     :sha     "6b5c9c060bdff84d0cd0bce908b64b268e5e6f0e"}
          org.clojure/clojurescript {:mvn/version "1.10.891"}
          pretty-project/ugly-ui    {:git/url "https://github.com/pretty-project/ugly-ui"
-                                    :sha     "e68e04f8db6912db9420c73d8220df90308e890a"}
+                                    :sha     "6387b881ead65846c86295d09ca4c3cf30faa564"}
          x5-project/x5             {:git/url "https://github.com/x5-project/x5"
-                                    :sha     "e68e04f8db6912db9420c73d8220df90308e890a"}}}
+                                    :sha     "6387b881ead65846c86295d09ca4c3cf30faa564"}}}
 
 ; + reagent/reagent
 ; + ?
