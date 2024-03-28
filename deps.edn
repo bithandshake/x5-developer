@@ -6,7 +6,7 @@
          pretty-project/ugly-ui    {:git/url "https://github.com/pretty-project/ugly-ui"
                                     :sha     "5405766c3380f9e7c5af18d0e461716310f45dc5"}
          x5-project/x5             {:git/url "https://github.com/x5-project/x5"
-                                    :sha     "c6399cda0a1f1e1b17f78ff8b248acb3e08cb018"}}}
+                                    :sha     "f365745c75c6be39a1d10ac300ac262fbe96ece0"}}}
 
 ; + reagent/reagent
 ; + ?
